@@ -14,10 +14,9 @@ function bdf
 
     set parent_directories[1] /
     set parent_directories $parent_directories[-1..1]
+    set -e parent_directories[1]
 
     set -l selected_path (echo (string join ' ' $parent_directories) |  tr ' ' '\n' | $BDF_SELECTOR --preview "$BDF_LS -A {}" --select-1)
-
-    echo $selected_path
 
     test -n "$selected_path" && cd $selected_path
 end
