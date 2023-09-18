@@ -6,6 +6,16 @@ Inspired by [fish-bd](https://github.com/0rax/fish-bd) and [enhancd](https://git
 ```fish
 fisher install ryoppippi/bdf.fish
 ```
+
+# Config
+Set your favorite selector and ls-alternative commands.
+Here is the default config.
+
+```fish
+set -x BDF_SELECTOR "fzf"
+set -x BDF_LS "lsd -A"
+```
+
 ## Authors
 
 - Ryotaro "Justin" Kimura http://github.com/ryoppippi
