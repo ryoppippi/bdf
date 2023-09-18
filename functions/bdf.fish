@@ -20,8 +20,8 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-not test -n "$BDF_SELECTOR" && set -x BDF_SELECTOR fzf
-not test -n "$BDF_LS" && set -x BDF_LS "lsd -A"
+test -z "$BDF_SELECTOR" && set -x BDF_SELECTOR fzf
+test -z "$BDF_LS" && set -x BDF_LS "lsd -A"
 
 function bdf
     set -l current_directory (pwd)
