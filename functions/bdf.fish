@@ -20,10 +20,12 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-test -z "$BDF_SELECTOR" && set -x BDF_SELECTOR fzf
-test -z "$BDF_LS" && set -x BDF_LS "lsd -A"
+
 
 function bdf
+    test -z "$BDF_SELECTOR" && set -x BDF_SELECTOR fzf
+    test -z "$BDF_LS" && set -x BDF_LS "lsd -A"
+
     set -l current_directory (pwd)
     set -l parent_directories
     set -l selected_directory
